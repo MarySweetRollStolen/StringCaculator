@@ -7,10 +7,21 @@ namespace StringCalculatorTests1
     public class StringCalculatorTests
     {
         [TestMethod]
-        public void Add_str_12()
+        public void Add_str_1_2()
         {
             string input = "1,2";
             int expected = 3;
+            StringCalculator stringCalculator = new StringCalculator();
+            int actual = stringCalculator.Add(input);
+
+            Assert.AreEqual(expected, actual, "Method Add failed");
+        }
+
+        [TestMethod]
+        public void Add_str_empty()
+        {
+            string input = "";
+            int expected = 0;
             StringCalculator stringCalculator = new StringCalculator();
             int actual = stringCalculator.Add(input);
 
