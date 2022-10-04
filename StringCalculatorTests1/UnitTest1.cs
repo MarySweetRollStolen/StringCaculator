@@ -50,5 +50,17 @@ namespace StringCalculatorTests1
 
             Assert.AreEqual(expected, actual, "Method Add with many numbers string failed");
         }
+
+
+        [TestMethod]
+        public void Add_str_new_lines_between_numbers()
+        {
+            string input = "“1\n2,3";
+            int expected = 6;
+            StringCalculator stringCalculator = new StringCalculator();
+            int actual = stringCalculator.Add(input);
+
+            Assert.AreEqual(expected, actual, "Method Add with new lines between numbers string failed");
+        }
     }
 }
