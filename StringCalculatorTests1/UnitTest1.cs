@@ -38,5 +38,17 @@ namespace StringCalculatorTests1
 
             Assert.AreEqual(expected, actual, "Method Add with 1 string failed");
         }
+
+
+        [TestMethod]
+        public void Add_str_many_numbers()
+        {
+            string input = "1, 2, 5, 1, 1, 4";
+            int expected = 14;
+            StringCalculator stringCalculator = new StringCalculator();
+            int actual = stringCalculator.Add(input);
+
+            Assert.AreEqual(expected, actual, "Method Add with many numbers string failed");
+        }
     }
 }
