@@ -55,7 +55,7 @@ namespace StringCalculatorTests1
         [TestMethod]
         public void Add_str_new_lines_between_numbers()
         {
-            string input = "“1\n2,3";
+            string input = "1\n2,3";
             int expected = 6;
             StringCalculator stringCalculator = new StringCalculator();
             int actual = stringCalculator.Add(input);
