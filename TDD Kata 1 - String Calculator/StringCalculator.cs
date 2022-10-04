@@ -8,7 +8,22 @@ namespace TDD_Kata_1___String_Calculator
     {
         public int Add(string numbers)
         {
-            return 3;
+            if (numbers.Length == 0)
+            {
+                return 0;
+            }
+            String[] splitNumbers = numbers.Split(",");
+            int result = 0;
+            foreach (string number in splitNumbers)
+            {
+                result += Int32.Parse(number);
+#if DEBUG
+                Console.Write("*");
+                Console.Write(result);
+                Console.Write("*");
+#endif
+            }
+            return result;
         }
     }
 }
