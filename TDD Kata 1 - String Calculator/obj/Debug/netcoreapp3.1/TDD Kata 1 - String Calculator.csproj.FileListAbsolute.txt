@@ -1,0 +1,17 @@
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\bin\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.exe
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\bin\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.deps.json
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\bin\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.runtimeconfig.json
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\bin\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.runtimeconfig.dev.json
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\bin\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.dll
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\bin\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.pdb
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.csproj.AssemblyReference.cache
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.AssemblyInfoInputs.cache
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.AssemblyInfo.cs
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.csproj.CoreCompileInputs.cache
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.csproj.CopyComplete
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.dll
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.pdb
+D:\Advantiss\TDD Kata 1 - String Calculator\TDD Kata 1 - String Calculator\obj\Debug\netcoreapp3.1\TDD Kata 1 - String Calculator.genruntimeconfig.cache
