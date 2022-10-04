@@ -12,7 +12,8 @@ namespace TDD_Kata_1___String_Calculator
             {
                 return 0;
             }
-            String[] splitNumbers = numbers.Split(",");
+            char[] separator = { ',', '\n' };
+            String[] splitNumbers = numbers.Split(separator);
             int result = 0;
             foreach (string number in splitNumbers)
             {
