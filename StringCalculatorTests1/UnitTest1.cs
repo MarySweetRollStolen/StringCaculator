@@ -62,5 +62,17 @@ namespace StringCalculatorTests1
 
             Assert.AreEqual(expected, actual, "Method Add with new lines between numbers string failed");
         }
+
+        [TestMethod]
+        public void Add_str_begins_with_delimiter()
+        {
+            string input = "//;\n1;2";
+            int expected = 3;
+            StringCalculator stringCalculator = new StringCalculator();
+            int actual = stringCalculator.Add(input);
+
+            Assert.AreEqual(expected, actual, "Method Add with string begins with delimiter failed");
+        }
+
     }
 }
