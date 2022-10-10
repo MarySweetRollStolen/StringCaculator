@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TDD_Kata_1___String_Calculator;
 
 namespace StringCalculatorTests1
@@ -72,6 +73,16 @@ namespace StringCalculatorTests1
             int actual = stringCalculator.Add(input);
 
             Assert.AreEqual(expected, actual, "Method Add with string begins with delimiter failed");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Negative numbers are not allowed (-2)")]
+        public void Add_str_throw_negative_number_exception()
+        {
+            string input = "//;\n1;-2";
+            StringCalculator stringCalculator = new StringCalculator();
+            int actual = stringCalculator.Add(input);
+            Assert.Fail("No exception throwing");
         }
 
     }
