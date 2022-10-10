@@ -85,5 +85,21 @@ namespace StringCalculatorTests1
             Assert.Fail("No exception throwing");
         }
 
+        [TestMethod]
+        public void Add_str_throw_multiple_negative_number_exception()
+        {
+            string input = "//;\n-1;-2";
+            StringCalculator stringCalculator = new StringCalculator();
+            try
+            {
+                int actual = stringCalculator.Add(input);
+                Assert.Fail("No multiple negative exception throwing");
+            }
+            catch(ArgumentException ex)
+            {
+                Assert.AreEqual("Negative numbers are not allowed (-1, -2)", ex.Message);
+            } 
+        }
+
     }
 }
