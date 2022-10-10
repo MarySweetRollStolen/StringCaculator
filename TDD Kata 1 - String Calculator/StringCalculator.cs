@@ -12,7 +12,14 @@ namespace TDD_Kata_1___String_Calculator
             {
                 return 0;
             }
-            char[] separator = { ',', '\n' };
+            if (numbers.Contains('-'))
+            {
+                throw new ArgumentException(($"Negative numbers are not allowed (-{numbers[numbers.IndexOf('-') + 1]})").ToString());
+            }
+            int indexOfFistNumber = numbers.IndexOfAny("0123456789".ToCharArray());
+            numbers = numbers.Substring(indexOfFistNumber, numbers.Length - indexOfFistNumber);
+
+            char[] separator = { ',', '\n' , ';'};
             String[] splitNumbers = numbers.Split(separator);
             int result = 0;
             foreach (string number in splitNumbers)
