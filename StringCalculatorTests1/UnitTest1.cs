@@ -101,5 +101,18 @@ namespace StringCalculatorTests1
             } 
         }
 
+        [TestMethod]
+        public void GetCalledCount_3_calls_of_method_Add()
+        {
+            string input = "//;\n1;2";
+            StringCalculator stringCalculator = new StringCalculator();
+            int result = stringCalculator.Add(input);
+            result = stringCalculator.Add(input);
+            result = stringCalculator.Add(input);
+            int expected = 3;
+            int actual = stringCalculator.GetCalledCount();
+            Assert.AreEqual(expected, actual, "Method GetCalledCount with 3 calls failed");
+        }
+
     }
 }
