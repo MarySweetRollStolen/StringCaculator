@@ -114,5 +114,15 @@ namespace StringCalculatorTests1
             Assert.AreEqual(expected, actual, "Method GetCalledCount with 3 calls failed");
         }
 
+        [TestMethod]
+        public void Add_str_2_1002_ignore_numbers_bigger_1000()
+        {
+            string input = "2,1001";
+            int expected = 2;
+            StringCalculator stringCalculator = new StringCalculator();
+            int actual = stringCalculator.Add(input);
+
+            Assert.AreEqual(expected, actual, "Method Add with string 2,1001 failed");
+        }
     }
 }
