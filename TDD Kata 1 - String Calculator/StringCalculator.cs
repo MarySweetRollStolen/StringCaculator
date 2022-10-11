@@ -38,7 +38,7 @@ namespace TDD_Kata_1___String_Calculator
             int result = 0;
             foreach (string number in splitNumbers)
             {
-                result += Int32.Parse(number);
+                result += (Int32.Parse(number) < 1000 ? Int32.Parse(number) : 0);
 #if DEBUG
                 Console.Write("*");
                 Console.Write(result);
