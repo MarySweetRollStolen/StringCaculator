@@ -8,8 +8,11 @@ namespace TDD_Kata_1___String_Calculator
 {
     public class StringCalculator
     {
+        private static int addMethodCounter = 0;
+
         public int Add(string numbers)
         {
+            addMethodCounter++;
             if (numbers.Length == 0)
             {
                 return 0;
@@ -44,5 +47,10 @@ namespace TDD_Kata_1___String_Calculator
             }
             return result;
         }
+        public int GetCalledCount()
+        {
+            return addMethodCounter;
+        }
+
     }
 }
