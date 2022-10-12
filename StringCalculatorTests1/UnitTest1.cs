@@ -95,10 +95,10 @@ namespace StringCalculatorTests1
                 int actual = stringCalculator.Add(input);
                 Assert.Fail("No multiple negative exception throwing");
             }
-            catch(ArgumentException ex)
+            catch (ArgumentException ex)
             {
                 Assert.AreEqual("Negative numbers are not allowed (-1, -2)", ex.Message);
-            } 
+            }
         }
 
         [TestMethod]
@@ -123,6 +123,17 @@ namespace StringCalculatorTests1
             int actual = stringCalculator.Add(input);
 
             Assert.AreEqual(expected, actual, "Method Add with string 2,1001 failed");
+        }
+
+        [TestMethod]
+        public void Add_str_delimiter_of_any_length()
+        {
+            string input = "//[***]\n1***2***3";
+            int expected = 6;
+            StringCalculator stringCalculator = new StringCalculator();
+            int actual = stringCalculator.Add(input);
+
+            Assert.AreEqual(expected, actual, "Method Add with delimiters of any length failed");
         }
     }
 }
