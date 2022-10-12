@@ -8,45 +8,39 @@ namespace TDD_Kata_1___String_Calculator
 {
     public class StringCalculator
     {
-        private static int addMethodCounter = 0;
+        private int addMethodCounter = 0;
 
         public int Add(string numbers)
         {
             addMethodCounter++;
-            if (numbers.Length == 0)
-            {
-                return 0;
-            }
+            if (numbers.Length == 0) return 0; 
             if (numbers.Contains('-'))
             {
-                Regex regex = new Regex(@"-\d+");
-                var negativeNumbersArray = regex.Matches(numbers).Cast<Match>().Select(m => m.Value).ToArray();
-                string negativeNumberForExceptionMessage = "";
-                foreach (string str in negativeNumbersArray)
-                {
-                    negativeNumberForExceptionMessage += str + ", ";
-                }
-                negativeNumberForExceptionMessage = negativeNumberForExceptionMessage.TrimEnd(',', ' ');
-                throw new ArgumentException(($"Negative numbers are not allowed (" + negativeNumberForExceptionMessage  + ")").ToString());
+                throw new ArgumentException(($"Negative numbers are not allowed (" + this.GetNegativeNumbers(numbers) + ")").ToString());
             }
-            
-            int indexOfFistNumber = numbers.IndexOfAny("0123456789".ToCharArray());
-            numbers = numbers.Substring(indexOfFistNumber, numbers.Length - indexOfFistNumber);
-
-            char[] separator = { ',', '\n' , ';'};
-            String[] splitNumbers = numbers.Split(separator);
+            Regex regexNumber = new Regex(@"\d+");
+            var positiveNumbers = regexNumber.Matches(numbers).Cast<Match>().Select(m => m.Value).ToArray();
             int result = 0;
-            foreach (string number in splitNumbers)
+            foreach (string num in positiveNumbers)
             {
-                result += (Int32.Parse(number) < 1000 ? Int32.Parse(number) : 0);
-#if DEBUG
-                Console.Write("*");
-                Console.Write(result);
-                Console.Write("*");
-#endif
+                result += (Int32.Parse(num) < 1000 ? Int32.Parse(num) : 0);
             }
             return result;
         }
+
+        private string GetNegativeNumbers(string numbers)
+        {
+            Regex regex = new Regex(@"-\d+");
+            var negativeNumbersArray = regex.Matches(numbers).Cast<Match>().Select(m => m.Value).ToArray();
+            string negativeNumberForExceptionMessage = "";
+            foreach (string str in negativeNumbersArray)
+            {
+                negativeNumberForExceptionMessage += str + ", ";
+            }
+            negativeNumberForExceptionMessage = negativeNumberForExceptionMessage.TrimEnd(',', ' ');
+            return negativeNumberForExceptionMessage;
+        }
+
         public int GetCalledCount()
         {
             return addMethodCounter;
