@@ -139,12 +139,24 @@ namespace StringCalculatorTests1
         [TestMethod]
         public void Add_str_multiple_delimeters()
         {
-            string input = "“//[*][%]\n1*2%3";
+            string input = "//[*][%]\n1*2%3";
             int expected = 6;
             StringCalculator stringCalculator = new StringCalculator();
             int actual = stringCalculator.Add(input);
 
             Assert.AreEqual(expected, actual, "Method Add with multiple delimiters failed");
+        }
+
+
+        [TestMethod]
+        public void Add_str_any_delimeters()
+        {
+            string input = "//[**][%%]\n1**2%%3";
+            int expected = 6;
+            StringCalculator stringCalculator = new StringCalculator();
+            int actual = stringCalculator.Add(input);
+
+            Assert.AreEqual(expected, actual, "Method Add with any delimiters failed");
         }
     }
 }
