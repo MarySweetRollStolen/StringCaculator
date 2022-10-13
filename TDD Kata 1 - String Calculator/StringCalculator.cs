@@ -9,10 +9,11 @@ namespace TDD_Kata_1___String_Calculator
     public class StringCalculator
     {
         private int addMethodCounter = 0;
+        public event Action<StringCalculator> AddOccured = OnAddOccured;
 
         public int Add(string numbers)
         {
-            addMethodCounter++;
+            AddOccured?.Invoke(this);
             if (numbers.Length == 0) return 0; 
             if (numbers.Contains('-'))
             {
@@ -26,6 +27,11 @@ namespace TDD_Kata_1___String_Calculator
                 result += (Int32.Parse(num) < 1000 ? Int32.Parse(num) : 0);
             }
             return result;
+        }
+
+        private static void OnAddOccured(StringCalculator source)
+        {
+            source.addMethodCounter++;
         }
 
         private string GetNegativeNumbers(string numbers)
